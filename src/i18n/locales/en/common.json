@@ -1,0 +1,9 @@
+{
+  "app": {
+    "name": "Simple Book",
+    "desc": "Simple Book - Create your creations"
+  },
+  "home": {
+    "title": "home"
+  }
+}
