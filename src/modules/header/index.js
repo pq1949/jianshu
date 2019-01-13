@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import i18n from '../../i18n'
 import { connect } from 'react-redux'
-import style from './style.css'
+import style from './style.module.css'
 
 class Header extends Component {
   render() {
