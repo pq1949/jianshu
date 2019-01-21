@@ -4,6 +4,12 @@
     "desc": "简书 - 创作你的创作"
   },
   "home": {
-    "title": "首页"
+    "title": "首页",
+    "download": "下载App",
+    "search": "搜索",
+    "setting": "Aa",
+    "login": "登录",
+    "sign": "注册",
+    "write": "写文章"
   }
 }

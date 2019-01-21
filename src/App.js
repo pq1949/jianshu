@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import i18n from './i18n'
-
+import './index.css'
 class App extends Component {
   render() {
     const t = i18n.getFixedT()

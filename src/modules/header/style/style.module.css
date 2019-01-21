@@ -1,0 +1,96 @@
+.navbar {
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.img-wrapper {
+  height: 100%;
+}
+
+.logo {
+  height: 100%;
+}
+
+.home,
+.download {
+  display: inline-block;
+  height: 100%;
+  padding: 15px;
+  line-height: 26px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.active {
+  color: #ea6f5a
+}
+
+.input {
+  padding: 0 40px 0 20px;
+  width: 160px;
+  height: 38px;
+  font-size: 14px;
+  border: 1px solid #eee;
+  border-radius: 40px;
+  background: #eee;
+  transition: width .5s;
+  transition-delay: .1s;
+  position: relative;
+  top: -23px;
+  outline: 0;
+  color: inherit;
+}
+
+.input:focus {
+  width: 240px;
+}
+
+.button {
+  float: right;
+  width: 100px;
+  height: 40px;
+  line-height: 24px;
+  margin: 8px 15px 0;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #ea6f5a;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+}
+
+.sing {
+  width: 80px;
+  height: 38px;
+  line-height: 24px;
+  margin: 9px 5px 0 15px;
+  border: 1px solid rgba(236, 97, 73, .7);
+  border-radius: 20px;
+  font-size: 15px;
+  color: #ea6f5a;
+  background-color: transparent;
+}
+
+.login, .setting {
+  background-color: transparent;
+  width: auto;
+  margin: 9px 6px 0 10px;;
+  font-size: 15px;
+  line-height: 24px;
+  color: #969696;
+}
