@@ -1,6 +1,7 @@
 {
   "name": "jianshu",
   "version": "0.1.0",
+  "homepage": "/jianshu/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.6",
