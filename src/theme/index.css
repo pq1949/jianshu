@@ -1,3 +1,4 @@
+@import './font/iconfont.css';
 *,
 :after,
 :before {
@@ -14,6 +15,7 @@ html {
 body {
   padding-top: 56px !important;
   min-width: 900px;
+  overflow-x: hidden;
   font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
   font-size: 17px
 }

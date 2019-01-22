@@ -27,8 +27,23 @@
   margin-right: 10px;
 }
 
+.home:hover,
+.download:hover {
+  background-color: #f5f5f5;
+}
+
 .active {
-  color: #ea6f5a
+  color: #ea6f5a;
+  background: none !important;
+}
+
+.search {
+  display: inline-flex;
+  position: relative;
+  vertical-align: top;
+  align-items: center;
+  height: 56px;
+  min-width: 160px;
 }
 
 .input {
@@ -40,9 +55,8 @@
   border-radius: 40px;
   background: #eee;
   transition: width .5s;
+  will-change: width;
   transition-delay: .1s;
-  position: relative;
-  top: -23px;
   outline: 0;
   color: inherit;
 }
@@ -51,10 +65,71 @@
   width: 240px;
 }
 
+.icon-search {
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transition: background-color .5s;
+  will-change: background-color;
+  right: 5px;
+  border-radius: 50%;
+}
+
+.icon-search-focus {
+  background-color: #969696;
+  color: #fff;
+}
+
+.search-tip {
+  position: absolute;
+  visibility: hidden;
+  top: 100%;
+  left: 0;
+  margin-top: 2px;
+  height: 157px;
+  width: 250px;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+}
+
+.search-tip-focus {
+  visibility: visible;
+}
+
+.search-tip::before {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+  content: "";
+  left: 27px;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  top: -8px;
+  z-index: -1;
+}
+
+.search-tip::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-bottom-color: #fff;
+  left: 20px;
+  bottom: 99%;
+}
+
 .button {
   float: right;
   width: 100px;
   height: 40px;
+  outline: none;
   line-height: 24px;
   margin: 8px 15px 0;
   border-radius: 20px;
@@ -66,13 +141,22 @@
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
+  transition: .1s ease-in;
   padding: 6px 12px;
+}
+
+.write:hover {
+  color: #fff;
+  background-color: #ec6149;
+}
+
+.write-icon {
+  float: left;
 }
 
 .sing {
@@ -87,10 +171,18 @@
   background-color: transparent;
 }
 
-.login, .setting {
+.sing:hover {
+  color: #ec6149;
+  border-color: #ec6149;
+  background-color: rgba(236, 97, 73, .05);
+}
+
+.login,
+.setting {
   background-color: transparent;
   width: auto;
-  margin: 9px 6px 0 10px;;
+  margin: 9px 6px 0 10px;
+  ;
   font-size: 15px;
   line-height: 24px;
   color: #969696;
