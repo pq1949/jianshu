@@ -13,7 +13,7 @@ class Header extends Component {
         <a className={style['img-wrapper']} href="/"><img src={logo} alt="logo" className={style.logo} /></a>
         <a className={cx(style.home,{[style.active]: active === 'home'})} href="/"><span>{i18n.getFixedT()('home.title')}</span></a>
         <a className={cx(style.download,{[style.active]: active === 'download'})} href="/"><span>{i18n.getFixedT()('home.download')}</span></a>
-        <input className={cx(style.input)} placeholder={i18n.getFixedT()('home.search')} autocomplete="off" type="text"/>
+        <input className={cx(style.input)} placeholder={i18n.getFixedT()('home.search')} autoComplete="off" type="text"/>
         <button className={cx(style.button)}>{i18n.getFixedT()('home.write')}</button>
         <button className={cx(style.button, style.sing)}>{i18n.getFixedT()('home.sign')}</button>
         <button className={cx(style.button, style.login)}>{i18n.getFixedT()('home.login')}</button>
