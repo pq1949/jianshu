@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import style from './style/style.module.css'
 import logo from './style/logo.png'
 import cx from 'classnames'
+import * as actions from './actions'
 
 class Header extends Component {
   constructor (props) {
@@ -13,13 +14,15 @@ class Header extends Component {
     }
   }
   setInputFocus (value) {
+    const data = this.props.getTrending()
+    // console.log(data.resolve())
     this.setState({
       inputFocus: value
     })
   }
   render () {
     const active = 'home'
-    const { tips = [] } = this.props
+    const { trending = [] } = this.props
     return (
       <nav className={style.navbar}>
         <a className={style['img-wrapper']} href="/"><img src={logo} alt="logo" className={style.logo} /></a>
@@ -29,7 +32,6 @@ class Header extends Component {
           <input
             className={cx(style.input)}
             onFocus={() => this.setInputFocus(true)}
-            onBlur={() => this.setInputFocus(false)}
             placeholder={i18n.getFixedT()('home.search')}
             autoComplete="off"
             type="text" />
@@ -41,7 +43,7 @@ class Header extends Component {
               <div className={cx(style['tip-header'])}></div>
               <ul className={cx(style.content)}>
                 {
-                  tips.map(item => {
+                  trending.map(item => {
                     return (
                       <li className={cx(style.tip)}>
                         {item}
@@ -65,5 +67,6 @@ class Header extends Component {
 }
 
 export default connect(state => ({
-  Language: state.Language
-}), null)(Header)
+  Language: state.Language,
+  trending: state.trending
+}), actions)(Header)
