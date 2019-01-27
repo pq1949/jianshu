@@ -3,7 +3,7 @@
     "name": "简书",
     "desc": "简书 - 创作你的创作"
   },
-  "home": {
+  "header": {
     "title": "首页",
     "download": "下载App",
     "search": "搜索",
@@ -13,5 +13,16 @@
     "write": "写文章",
     "hotSearch": "热门搜索",
     "change": "换一批"
+  },
+  "home": {
+    "readMore": "阅读更多",
+    "about": "关于简书",
+    "contact": "联系我们",
+    "join": "加入我们",
+    "publish": "简书出版",
+    "logo": "品牌与徽标",
+    "help": "帮助中心",
+    "partner": "合作伙伴",
+    "loading": "加载中..."
   }
 }

@@ -53,14 +53,14 @@ class Header extends Component {
     return (
       <nav className={style.navbar}>
         <a className={style['img-wrapper']} href="/"><img src={logo} alt="logo" className={style.logo} /></a>
-        <a className={cx(style.home, { [style.active]: active === 'home' })} href="/"><span>{t('home.title')}</span></a>
-        <a className={cx(style.download, { [style.active]: active === 'download' })} href="/"><span>{t('home.download')}</span></a>
+        <a className={cx(style.home, { [style.active]: active === 'home' })} href="/"><span>{t('header.title')}</span></a>
+        <a className={cx(style.download, { [style.active]: active === 'download' })} href="/"><span>{t('header.download')}</span></a>
         <div className={cx(style.search)}>
           <input
             className={cx(style.input)}
             onFocus={() => this.setInputFocus(true)}
             onBlur={() => this.setInputFocus(false)}
-            placeholder={t('home.search')}
+            placeholder={t('header.search')}
             autoComplete="off"
             type="text" />
           <div className={cx(style['icon-search'], { [style['icon-search-focus']]: inputFocus })}>
@@ -69,8 +69,8 @@ class Header extends Component {
           <div className={cx(style['search-tip'], { [style['search-tip-focus']]: inputFocus })}>
             <div className={cx(style['tip-content-wrapper'])}>
               <div className={cx(style['tip-header'])}>
-                <span className={style.hotSearch}>{t('home.hotSearch')}</span>
-                <span className={style.change} onClick={this.change}><i className={cx('iconfont',style.changeIcon)} style={{transform: `rotate(${turn}turn)`}}>&#xe636;</i>{t('home.change')}</span>
+                <span className={style.hotSearch}>{t('header.hotSearch')}</span>
+                <span className={style.change} onClick={this.change}><i className={cx('iconfont',style.changeIcon)} style={{transform: `rotate(${turn}turn)`}}>&#xe636;</i>{t('header.change')}</span>
               </div>
               <ul className={cx(style.content)}>
                 {
@@ -86,12 +86,12 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        <button className={cx(style.button, style.write)}>{i18n.getFixedT()('home.write')}
+        <button className={cx(style.button, style.write)}>{i18n.getFixedT()('header.write')}
           <i className={cx('iconfont', style['write-icon'])}>&#xe616;</i>
         </button>
-        <button className={cx(style.button, style.sing)}>{i18n.getFixedT()('home.sign')}</button>
-        <button className={cx(style.button, style.login)}>{i18n.getFixedT()('home.login')}</button>
-        <button className={cx(style.button, style.setting)}>{i18n.getFixedT()('home.setting')}</button>
+        <button className={cx(style.button, style.sing)}>{i18n.getFixedT()('header.sign')}</button>
+        <button className={cx(style.button, style.login)}>{i18n.getFixedT()('header.login')}</button>
+        <button className={cx(style.button, style.setting)}>{i18n.getFixedT()('header.setting')}</button>
       </nav>
     )
   }

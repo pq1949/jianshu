@@ -3,6 +3,7 @@
   width: 100%;
   min-width: 900px;
   position: fixed;
+  background: #fff;
   left: 0;
   top: 0;
   z-index: 1030;

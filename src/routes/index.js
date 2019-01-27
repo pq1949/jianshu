@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import Header from '../modules/header'
-import Home from '../modules/Home'
+import Home from '../modules/home'
 import i18n from '../i18n'
 import * as actions from './actions'
 
