@@ -86,12 +86,9 @@
 .search-tip {
   position: absolute;
   visibility: hidden;
-  top: 100%;
+  top: 56px;
   left: 0;
-  margin-top: 2px;
-  height: 157px;
   width: 250px;
-  z-index: 100;
   background-color: #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, .2);
   border-radius: 4px;
@@ -101,16 +98,20 @@
   visibility: visible;
 }
 
+.search-tip:hover {
+  visibility: visible;
+}
+
 .search-tip::before {
   position: absolute;
-  background-color: #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
   content: "";
-  left: 27px;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .2);
   transform: rotate(45deg);
-  top: -8px;
+  left: 25px;
+  top: -5px;
   z-index: -1;
 }
 
@@ -119,10 +120,11 @@
   position: absolute;
   width: 0;
   height: 0;
-  border: 12px solid transparent;
+  border: 10px solid transparent;
   border-bottom-color: #fff;
   left: 20px;
-  bottom: 99%;
+  top: -20px;
+  z-index: 1;
 }
 
 .button {
@@ -186,4 +188,52 @@
   font-size: 15px;
   line-height: 24px;
   color: #969696;
+}
+
+.tip-content-wrapper {
+  padding: 20px 20px  10px;
+}
+
+.tip-header {
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #969696;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.change {
+  cursor: pointer;
+  font-size: 13px;
+  user-select: none;
+}
+.changeIcon{
+  font-size: 13px;
+  margin-right: 2px;
+  display: inline-block;
+  height: 13px;
+  line-height: 1;
+  transition: transform .5s;
+}
+
+.content {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tip {
+  line-height: 28px;
+  margin-right: 10px;
+}
+
+.tip >a {
+  padding: 2px 6px;
+  font-size: 12px;
+  color: #787878;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  pointer-events: none;
 }

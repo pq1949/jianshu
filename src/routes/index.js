@@ -23,7 +23,7 @@ class Routes extends React.Component {
       <Router>
         <div style={styles.container}>
           <Header></Header>
-          <Route path='/' component={Home}></Route>
+          <Route exact path='/' component={Home}></Route>
         </div>
       </Router>
     )

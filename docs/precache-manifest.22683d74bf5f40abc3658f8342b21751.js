@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "b6fef7f30eb9e648ae45",
-    "url": "/jianshu/static/css/main.eb2ec9ba.chunk.css"
+    "revision": "5d88648df58e017b5b99",
+    "url": "/jianshu/static/css/main.2811a078.chunk.css"
   },
   {
-    "revision": "b6fef7f30eb9e648ae45",
-    "url": "/jianshu/static/js/main.b6fef7f3.chunk.js"
+    "revision": "5d88648df58e017b5b99",
+    "url": "/jianshu/static/js/main.5d88648d.chunk.js"
   },
   {
-    "revision": "481636ac4cf9421b0450",
-    "url": "/jianshu/static/js/1.481636ac.chunk.js"
+    "revision": "9bdf8e40868b17169a5c",
+    "url": "/jianshu/static/js/1.9bdf8e40.chunk.js"
   },
   {
     "revision": "7ade63057a3c2406bb02",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/jianshu/static/media/iconfont.0427eaca.svg"
   },
   {
-    "revision": "27e985f5a7b218eabcab010f85459ac3",
+    "revision": "8499d744a26dbbe8004fcd330ea60f75",
     "url": "/jianshu/index.html"
   }
 ];

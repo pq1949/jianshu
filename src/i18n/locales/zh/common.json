@@ -10,6 +10,8 @@
     "setting": "Aa",
     "login": "登录",
     "sign": "注册",
-    "write": "写文章"
+    "write": "写文章",
+    "hotSearch": "热门搜索",
+    "change": "换一批"
   }
 }
