@@ -1,3 +1,5 @@
+/* eslint-disable no-script-url */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react'
 import i18n from '../../i18n'
 import { connect } from 'react-redux'
@@ -77,7 +79,7 @@ class Header extends Component {
                   pageTrending.map(item => {
                     return (
                       <li key={item} className={cx(style.tip)}>
-                        <a href="/#">{item}</a>
+                        <a href="javascript:void(0)">{item}</a>
                       </li>
                     )
                   })
