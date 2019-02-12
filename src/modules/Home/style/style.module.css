@@ -100,11 +100,13 @@
   color: #333;
   vertical-align: middle;
 }
+
 .download .info .title i {
   display: inline-block;
   font-size: 15px;
   color: #333;
 }
+
 .download .info .desc {
   margin-top: 4px;
   font-size: 13px;
@@ -119,7 +121,8 @@
   top: -190px;
   left: 50px;
 }
-.download::after{
+
+.download::after {
   position: absolute;
   top: -10px;
   left: 130px;
@@ -130,7 +133,8 @@
   border-top-color: #fff;
   z-index: 1;
 }
-.download::before{
+
+.download::before {
   position: absolute;
   z-index: -1;
   content: '';
@@ -143,9 +147,87 @@
   transform: rotate(45deg);
 }
 
-.notShow::before, .notShow::after {
+.notShow::before,
+.notShow::after {
   content: none;
 }
+
 .notShowLargeImg {
   visibility: hidden;
+}
+
+.recommended .author {
+  font-size: 14px;
+  color: #969696;
+}
+
+.recommended .change {
+  font-size: 14px;
+  cursor: pointer;
+  color: #969696;
+  float: right;
+  user-select: none;
+}
+
+.recommended .changeIcon {
+  font-size: 13px;
+  margin-right: 2px;
+  display: inline-block;
+  height: 13px;
+  line-height: 1;
+  transition: transform .5s;
+}
+
+.recommended .auth-item {
+  margin-top: 15px;
+  position: relative;
+}
+
+.recommended .auth-item .avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.recommended .auth-item .avatar img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.recommended .auth-item .desc {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+  padding-top: 5px;
+}
+
+.recommended .auth-item .desc .statistics {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #969696;
+}
+
+.recommended .auth-item .follow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 13px;
+  color: #42c02e;
+  cursor: pointer;
+}
+
+.view-all {
+  padding: 7px 7px 7px 12px;
+  width: 100%;
+  font-size: 13px;
+  color: #787878;
+  background-color: #f7f7f7;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
 }

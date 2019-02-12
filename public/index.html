@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#000000" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#000000" />
+  <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/asset-manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/asset-manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -22,12 +20,40 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>简书 - 创作你的创作</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>简书 - 创作你的创作</title>
+  <script>
+    if (!window.requestAnimationFrame) {
+      requestAnimationFrame = function (fn) {
+        setTimeout(fn, 17)
+      }
+    }
+
+    Math.easeout = function (origin, target, rate, callback) {
+      if (origin == target || typeof origin != 'number' || typeof target != 'number') {
+        return
+      }
+      target = target || 0
+      rate = rate || 2
+      var direction = origin > target
+      var step = function () {
+        origin = origin + (target - origin) / rate
+
+        if ((direction && origin < target + 1) || (!direction && origin > target - 1)) {
+          callback(target, true)
+          return
+        }
+        callback(origin, false)
+        requestAnimationFrame(step)
+      }
+      step()
+    }
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -37,5 +63,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
